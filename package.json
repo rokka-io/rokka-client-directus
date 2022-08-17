@@ -1,0 +1,45 @@
+{
+  "name": "rokka-client-directus",
+  "version": "0.1.0",
+  "keywords": [
+    "directus",
+    "rokka",
+    "client"
+  ],
+  "description": "Utility library for directus",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "lint": "eslint --ext .js,.ts .",
+    "format": "eslint --ext .js,.ts --fix ."
+  },
+  "devDependencies": {
+    "@directus/drive": "^9.15.1",
+    "@directus/shared": "^9.15.1",
+    "@types/node": "^18.7.6",
+    "directus-codestyle": "github:dimitrov-adrian/directus-codestyle",
+    "pino": "^8.4.1",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "rokka": "^3.8.0"
+  },
+  "prettier": "directus-codestyle/prettier",
+  "stylelint": {
+    "extends": "directus-codestyle/stylelint"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/directus-codestyle/.eslintrc.js",
+    "parserOptions": {
+      "sourceType": "module"
+    },
+    "rules": {
+      "vue/multi-word-component-names": 0
+    }
+  }
+}
